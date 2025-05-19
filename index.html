@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mtro. Israel Ithamar Ródriguez Ramírez - Candidato a Juez Civil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f7fee7',
+                            100: '#ecfccb',
+                            200: '#d9f99d',
+                            300: '#bef264',
+                            400: '#a3e635',
+                            500: '#84cc16',
+                            600: '#65a30d',
+                            700: '#4d7c0f',
+                            800: '#3f6212',
+                            900: '#365314',
+                        },
+                        lime: {
+                            50: '#f7fee7',
+                            100: '#ecfccb',
+                            200: '#d9f99d',
+                            300: '#bef264',
+                            400: '#a3e635',
+                            500: '#84cc16',
+                            600: '#65a30d',
+                            700: '#4d7c0f',
+                            800: '#3f6212',
+                            900: '#365314',
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #65a30d;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5rem;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: #65a30d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .proposal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #65a30d;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(101, 163, 13, 0.7);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .youtube-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .youtube-background iframe {
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .gradient-footer {
+            background: linear-gradient(to bottom, white, #E2FF71);
+            border-top: 3px solid #84cc16;
+        }
+        .footer-link:hover {
+            color: #84cc16;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Barra de navegación -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary-900">Mtro. Israel Ithamar Ródriguez Ramírez</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link text-gray-700 hover:text-primary-900">Inicio</a>
+                    <a href="#propuestas" class="nav-link text-gray-700 hover:text-primary-900">Propuestas</a>
+                    <a href="#trayectoria" class="nav-link text-gray-700 hover:text-primary-900">Trayectoria</a>
+                    <a href="#votar" class="nav-link text-gray-700 hover:text-primary-900">Cómo Votar</a>
+                    <a href="#contacto" class="nav-link text-gray-700 hover:text-primary-900">Contacto</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary-900"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio con video de YouTube de fondo -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="youtube-background">
+            <iframe 
+				src="https://www.youtube.com/embed/OnQSSOWsTCM?autoplay=1&mute=1&loop=1&playlist=OnQSSOWsTCM&controls=0&rel=0&showinfo=0"
+				frameborder="0"
+				allow="autoplay; encrypted-media"
+				allowfullscreen>
+			</iframe>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container mx-auto px-6 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Mtro. Israel Ithamar Ródriguez Ramírez</h1>
+            <h2 class="text-2xl md:text-4xl font-semibold mb-6 mx-auto">Candidato a Juez Civil en la CDMX Distrito electoral judicial 11 Xochimilco, Tláhuac y Milpa Alta</h2>
+            <p class="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto">Más de 25 años en el medio jurídico, empresarial y financiero. Me presento ante ustedes con el compromiso de trabajar por una justicia más transparente, accesible y eficiente para todos los ciudadanos.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#propuestas" class="bg-white text-primary-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Conoce mis propuestas</a>
+                <a href="#votar" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-800 transition duration-300">Cómo votar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Propuestas (ahora antes de Trayectoria) -->
+    <section id="propuestas" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-primary-900 mb-16">Mis Propuestas para la Justicia</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Propuesta 1 -->
+                <div class="proposal-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="video-container">
+						<iframe 
+							src="https://www.youtube.com/embed/OnQSSOWsTCM?autoplay=0&mute=0&loop=0&playlist=OnQSSOWsTCM&controls=0&rel=0" 
+							frameborder="0" 
+							allow="autoplay; encrypted-media" 
+							allowfullscreen>
+						</iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-3">Juez a puestas abiertas</h3>
+                        <p class="text-gray-700 mb-4">Apertura de los despachos para tener la capacidad de contactar con la ciudadania</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Transparencia</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Accesibilidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propuesta 2 -->
+                <div class="proposal-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+				  <div class="video-container relative pt-[56.25%] overflow-hidden">
+					<iframe 
+					  class="absolute top-0 left-0 w-full h-full"
+					  src="https://www.youtube.com/embed/Egr2_17fGzY?autoplay=0&mute=0&loop=0&playlist=Egr2_17fGzY&controls=0&rel=0"
+					  frameborder="0" 
+					  allow="autoplay; encrypted-media" 
+					  allowfullscreen>
+					</iframe>
+				  </div>
+				  <div class="p-6">
+					<h3 class="text-xl font-bold text-primary-900 mb-3">Platica con tu Juez</h3>
+					<p class="text-gray-700 mb-4">Dedicar un día a la semana para la platica directa con el Juez.</p>
+					<div class="flex flex-wrap gap-2">
+					  <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Confianza</span>
+					  <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Cercanía</span>
+					</div>
+				  </div>
+				</div>
+
+                <!-- Propuesta 3 -->
+                <div class="proposal-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="video-container relative pt-[56.25%] overflow-hidden">
+						<iframe 
+						  class="absolute top-0 left-0 w-full h-full"
+						  src="https://www.youtube.com/embed/gfmZnEXnfmc?autoplay=0&mute=0&loop=0&playlist=gfmZnEXnfmc&controls=0&rel=0"
+						  frameborder="0" 
+						  allow="autoplay; encrypted-media" 
+						  allowfullscreen>
+						</iframe>
+					</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-3">Justicia, juicio y equidad</h3>
+                        <p class="text-gray-700 mb-4">Sin distinciones, con humanidad y firmeza, para todos y todas</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Empat&iacute;a</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Equidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propuesta 4 -->
+                <div class="proposal-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="video-container relative pt-[56.25%] overflow-hidden">
+						<iframe 
+						  class="absolute top-0 left-0 w-full h-full"
+						  src="https://www.youtube.com/embed/gY8M6VTv6to?autoplay=0&mute=0&loop=0&playlist=gY8M6VTv6to&controls=0&rel=0"
+						  frameborder="0" 
+						  allow="autoplay; encrypted-media" 
+						  allowfullscreen>
+						</iframe>
+					</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-3">Justicia pronta y expedita</h3>
+                        <p class="text-gray-700 mb-4">Nada de retrasos innecesarios: resoluciones en tiempo.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Pronta</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Expedita</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propuesta 5 -->
+                <div class="proposal-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="video-container relative pt-[56.25%] overflow-hidden">
+						<iframe 
+						  class="absolute top-0 left-0 w-full h-full"
+						  src="https://www.youtube.com/embed/WW-gBi1xnok?autoplay=0&mute=0&loop=0&playlist=WW-gBi1xnok&controls=0&rel=0"
+						  frameborder="0" 
+						  allow="autoplay; encrypted-media" 
+						  allowfullscreen>
+						</iframe>
+					</div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-3">Restaurar una Justicia Verdadera</h3>
+                        <p class="text-gray-700 mb-4">Volver al sentido &eacute;tico, humano y profesional de la ley.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Reconciliación</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Innovación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propuesta 6 -->
+                <div class="proposal-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="video-container">
+						<iframe 
+							src="https://www.youtube.com/embed/OnQSSOWsTCM?autoplay=0&mute=0&loop=0&playlist=OnQSSOWsTCM&controls=0&rel=0" 
+							frameborder="0" 
+							allow="autoplay; encrypted-media" 
+							allowfullscreen>
+						</iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-3">Modernizaci&oacute;n del sistema de justicia</h3>
+                        <p class="text-gray-700 mb-4">Implementación de tecnologías para agilizar procesos, reducir tiempos de espera y hacer más transparente la administración de justicia.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Tecnología</span>
+                            <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">Eficiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Trayectoria -->
+    <section id="trayectoria" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-primary-900 mb-16">Trayectoria Profesional</h2>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- Timeline item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap text-xs"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Licenciatura en Derecho</h3>
+                        <p class="text-gray-600 mb-2">Universidad Nacional Autónoma de México</p>
+                        <p class="text-gray-700">T&iacute;tulo y c&eacute;dula profesional.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-briefcase text-xs"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Maestria en Finanzas</h3>
+                        <p class="text-gray-600 mb-2">Universidad Nacional Autónoma de México</p>
+                        <p class="text-gray-700">T&iacute;tulo y c&eacute;dula profesional.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-balance-scale text-xs"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Contador P&uacute;blico</h3>
+                        <p class="text-gray-600 mb-2">Universidad del Valle de M&eacute;xico</p>
+                        <p class="text-gray-700">T&iacute;tulo y c&eacute;dula profesional.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-landmark text-xs"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Licenciado en Administraci&oacute;n</h3>
+                        <p class="text-gray-600 mb-2">Universidad Nacional Autónoma de México</p>
+                        <p class="text-gray-700">T&iacute;tulo y c&eacute;dula profesional..</p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-book text-xs"></i>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Experiencia Laboral</h3>
+                        <p class="text-gray-600 mb-2">Sector Privado</p>
+                        <p class="text-gray-700">Asesor Jur&iacute;dico y Abogado, Especialista en contabilidad fiscal y financiera, Banquero y Servicios Fianancieros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección Cómo Votar -->
+    <section id="votar" class="py-20 bg-primary-50">
+	  <div class="container mx-auto px-6">
+		<h2 class="text-3xl font-bold text-center text-primary-900 mb-16">Cómo Votar</h2>
+
+		<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+		  <div>
+			<h3 class="text-xl font-semibold text-primary-900 mb-6">Proceso Electoral para Juez Civil</h3>
+			<p class="text-gray-700 mb-4">
+			  La elección de los Jueces Civiles es un proceso fundamental para nuestra democracia y el funcionamiento del sistema judicial.
+			</p>
+
+			<div class="space-y-4">
+			  <div class="flex items-start">
+				<div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+				  <i class="fas fa-check text-primary-800 text-sm"></i>
+				</div>
+				<div>
+				  <h4 class="font-semibold text-primary-900">Requisitos para votar</h4>
+				  <p class="text-gray-600">
+					Ser ciudadano mexicano mayor de 18 años y estar inscrito en el padrón electoral.
+				  </p>
+				</div>
+			  </div>
+
+			  <div class="flex items-start">
+				<div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+				  <i class="fas fa-calendar-alt text-primary-800 text-sm"></i>
+				</div>
+				<div>
+				  <h4 class="font-semibold text-primary-900">Fecha de elección</h4>
+				  <p class="text-gray-600">
+					El próximo proceso electoral para Jueces Civiles será el 1 de junio de 2025.
+				  </p>
+				</div>
+			  </div>
+
+			  <div class="flex items-start">
+				<div class="bg-primary-100 p-2 rounded-full mr-4 mt-1">
+				  <i class="fas fa-file-alt text-primary-800 text-sm"></i>
+				</div>
+				<div>
+				  <h4 class="font-semibold text-primary-900">Documentación necesaria</h4>
+				  <p class="text-gray-600">Presentar credencial para votar vigente.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div>
+			<div class="video-container relative pt-[56.25%] overflow-hidden rounded-lg shadow-md">
+			  <iframe 
+				class="absolute top-0 left-0 w-full h-full"
+				src="https://www.youtube.com/embed/bEfJTvoBRFg?autoplay=1&mute=1&loop=1&playlist=bEfJTvoBRFg&controls=0&rel=0"
+				frameborder="0" 
+				allow="autoplay; encrypted-media" 
+				allowfullscreen>
+			  </iframe>
+			</div>
+			<p class="text-center mt-4 text-primary-700">
+			  Video explicativo sobre el proceso de votación para Jueces Civiles
+			</p>
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-primary-900 mb-16">Contacto</h2>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-primary-900 mb-6">Envía tu mensaje</h3>
+                    <form id="contactForm" class="space-y-6">
+						<div>
+							<label for="nombre" class="block text-gray-700 mb-2">Nombre completo</label>
+							<input type="text" name="nombre" id="nombre" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+						</div>
+						<div>
+							<label for="email" class="block text-gray-700 mb-2">Correo electrónico</label>
+							<input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+						</div>
+						<div>
+							<label for="asunto" class="block text-gray-700 mb-2">Asunto</label>
+							<input type="text" name="asunto" id="asunto" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+						</div>
+						<div>
+							<label for="mensaje" class="block text-gray-700 mb-2">Mensaje</label>
+							<textarea name="mensaje" id="mensaje" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+						</div>
+						<button type="submit" class="bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-800 transition duration-300 w-full">Enviar mensaje</button>
+						<p id="formSuccess" class="hidden text-green-600 font-semibold mt-4 text-center">¡Tu mensaje ha sido enviado exitosamente!</p>
+					</form>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-primary-900 mb-6">Información de contacto</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-primary-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Oficina de Campaña</h4>
+                                <p class="text-gray-600">Col. Centro, CDMX</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Correo electrónico</h4>
+                                <p class="text-gray-600">ithamar7@hotmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-primary-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">+52 1 56 2075 0299</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-primary-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Horario de atención</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00 hrs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <h4 class="font-semibold text-gray-800 mb-4">Sígueme en redes sociales</h4>
+                        <div class="flex space-x-4">
+                            
+                            <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-800 hover:bg-primary-200 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-800 hover:bg-primary-200 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-primary-100 p-3 rounded-full text-primary-800 hover:bg-primary-200 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+							<a href="#" class="bg-primary-100 p-3 rounded-full text-primary-800 hover:bg-primary-200 transition duration-300">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con gradiente vertical de blanco a verde lima -->
+    <footer class="gradient-footer py-12 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Dr. Israel Ithamar Ródriguez Ramírez</h3>
+                    <p class="text-gray-600 mb-4">Candidato a Juez Civil en la CDMX Distrito XI</p>
+                    <p class="italic text-gray-700">"Por una justicia transparente, accesible y eficiente"</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-800">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-600 hover:text-primary-600 transition duration-300">Inicio</a></li>
+                        <li><a href="#propuestas" class="text-gray-600 hover:text-primary-600 transition duration-300">Propuestas</a></li>
+                        <li><a href="#trayectoria" class="text-gray-600 hover:text-primary-600 transition duration-300">Trayectoria</a></li>
+                        <li><a href="#votar" class="text-gray-600 hover:text-primary-600 transition duration-300">Cómo Votar</a></li>
+                        <li><a href="#contacto" class="text-gray-600 hover:text-primary-600 transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-800">Redes Sociales</h4>
+                    <div class="flex space-x-4 mb-4">
+                        
+                        <a href="#" class="bg-white p-3 rounded-full text-primary-600 hover:bg-primary-100 transition duration-300 shadow-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-white p-3 rounded-full text-primary-600 hover:bg-primary-100 transition duration-300 shadow-sm">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-white p-3 rounded-full text-primary-600 hover:bg-primary-100 transition duration-300 shadow-sm">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+						
+						<a href="#" class="bg-white p-3 rounded-full text-primary-600 hover:bg-primary-100 transition duration-300 shadow-sm">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-500">Síguenos para estar al tanto de nuestras actividades y propuestas</p>
+                </div>
+            </div>
+
+            <div class="border-t border-primary-500 mt-8 pt-8 text-center text-gray-600 text-sm">
+                <p>© 2025 Mtro. Israel Ithamar Ródriguez Ramírez - Candidato a Juez Civil. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle (would need additional implementation)
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        mobileMenuButton.addEventListener('click', function() {
+            // Implement mobile menu toggle functionality here
+            console.log('Mobile menu clicked');
+        });
+    </script>
+	<script>
+		document.getElementById('contactForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			const form = e.target;
+			const formData = new FormData(form);
+
+			fetch('https://formsubmit.co/ajax/abrahammr3@gmail.com', {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json'
+				},
+				body: formData
+			}).then(response => {
+				if (response.ok) {
+					form.reset();
+					document.getElementById('formSuccess').classList.remove('hidden');
+				} else {
+					alert('Hubo un error al enviar el mensaje.');
+				}
+			}).catch(error => {
+				alert('No se pudo conectar con el servidor de FormSubmit.');
+			});
+		});
+	</script>
+</body>
+</html>
